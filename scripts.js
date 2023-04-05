@@ -15,24 +15,24 @@ document.getElementById('btn').addEventListener('click', () =>{
     row.insertCell(1).innerHTML = document.getElementById('name').value;
     row.insertCell(2).innerHTML = document.getElementById('age').value;
     row.insertCell(3).innerHTML = document.getElementById('fav-num').value;
-    // let deleteBtn = row.insertCell(4);
-    // deleteBtn.appendChild(createDeleteButton(id++))
+    let deleteBtn = row.insertCell(4);
+    deleteBtn.appendChild(createDeleteButton(id++))
     document.getElementById('name').value = '';
     document.getElementById('age').value = '';
     document.getElementById('fav-num').value = '';
-    id++
+    // id++
 });
 
-// function createDeleteButton(id) {
-//     let btn = document.createElement('button');
-//     btn.className = 'btn btn-danger';
-//     btn.id = id;
-//     btn.innerHTML = 'Delete';
-//     btn.onclick = () => {
-//         console.log(`Deleting row with id: item-${id}`);
-//         let elementToDelete = document.getElementById(`item-${id}`);
-//         elementToDelete.parentNode.removeChild(elementToDelete);
+function createDeleteButton(id) {
+    let btn = document.createElement('button');
+    btn.className = 'btn btn-danger';
+    btn.id = id;
+    btn.innerHTML = 'Delete';
+    btn.onclick = () => {
+        console.log(`Deleting row with id: item-${id}`);
+        let elementToDelete = document.getElementById(`item-${id}`);
+        elementToDelete.parentNode.removeChild(elementToDelete);
     
-//     }
-//     return btn;
-// }
+    }
+    return btn;
+}
