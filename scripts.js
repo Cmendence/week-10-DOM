@@ -1,8 +1,4 @@
-// Find a way to make dates set so end date cannot be before start date
-// fields required not working
-// Best way to display MM/DD/YYY 
 
-// https://www.youtube.com/watch?v=xvFZjo5PgG0
 
 let id = 1;
 //tell my button to add a row to the list
